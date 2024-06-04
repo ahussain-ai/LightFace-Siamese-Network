@@ -1,27 +1,22 @@
-import cv2
 import numpy  as np
 from itertools import combinations, product
 import random
 import glob
 import os
-from PIL import Image
-import matplotlib.pyplot  as plt
 import tensorflow as tf 
 import warnings 
 warnings.filterwarnings('ignore')
 
 
 
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+def read_tf_path(tf_img_path, target_size = (105,105), grayscale=False) :
 
-
-def read_tf_path(tf_img_path) :
-
+    n_c =  1 if grayscale else 3
     # Read the image
     image = tf.io.read_file(tf_img_path)
-    image = tf.image.decode_jpeg(image, channels=3)
+    image = tf.image.decode_jpeg(image, channels=n_c)
 
-    image = tf.image.resize(image,size = (105,105))
+    image = tf.image.resize(image,size =target_size)
 
     return tf.cast(image, tf.uint16)
 
