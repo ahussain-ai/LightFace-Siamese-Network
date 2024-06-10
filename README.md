@@ -6,7 +6,7 @@ SiamNet is a specialized deep learning architecture designed to address the chal
 How Siamese Networks Work
 A Siamese network consists of two identical subnetworks that share the same architecture and weights. These subnetworks process two input images independently to produce two feature vectors. These vectors are then compared using a distance metric, such as Euclidean distance, to determine the similarity between the images. The training process involves minimizing a contrastive loss function, which ensures that the distance between similar images is minimized and the distance between dissimilar images is maximized.
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40rinkinag24%2Fa-comprehensive-guide-to-siamese-neural-networks-3358658c0513&psig=AOvVaw3_JAhUGyzvsAR5UgLhzVws&ust=1718131487018000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNje8NjY0YYDFQAAAAAdAAAAABAE" im/>
+![SiamNet Architecture](diagram.png.png)
 
 #### Application in Face Recognition
 In the context of face recognition, SiamNet operates by:
